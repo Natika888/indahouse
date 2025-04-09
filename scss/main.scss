@@ -1,0 +1,36 @@
+@import './base';
+
+@import './utils/variables';
+// @import './utils/utils';
+// @import './utils/mixins';
+@import './layouts/header.scss';
+@import './layouts/hero.scss';
+
+
+html {
+    scroll-behavior: smooth;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: $fontFamily;
+    font-size: $fontSize;
+    font-style: normal;
+    // letter-spacing: 0.2px;
+    // background-color: var(--dark-background, #181818);
+
+    &.lock {
+        overflow: hidden;
+    }
+}
+
+[class*='__container'] {
+    display: flex;
+    width: 100%;
+    max-width: 1820px;
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+}
