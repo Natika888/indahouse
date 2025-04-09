@@ -1,21 +1,20 @@
 .header {
     display: flex;
     align-items: center;
-    background-color:rgba(22, 22, 22, 0.9);
+    background-color: rgba(22, 22, 22, 0.9);
     height: 108px;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-     
+
 
     &__container {
         display: flex;
         justify-content: space-between;
     }
 
-    &__logo-image {
-    }
+    &__logo-image {}
 
     &__controls {
         display: flex;
@@ -30,7 +29,18 @@
     }
 
     &__lang {
-        color: #FFFFFF;
+        color: transparent;
+        background: #fff;
+        background-clip: text;
+        -webkit-background-clip: text; // для Safari
+        -webkit-text-fill-color: transparent; // для Safari
+        transition: background 0.3s ease;
+
+        &:hover {
+            background: linear-gradient(-90deg, #02edb6 0, #13bce5 18%, #ff62c5 44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 
     &__lang-divider {
@@ -39,7 +49,20 @@
     }
 
     &__menu-button {
-        color: #FFFFFF;
+        background: none;
+        border: none;
+        color: #fff;
+        transition: background 0.3s ease;
+        // Чтобы работал градиент по тексту
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: #fff; // по умолчанию белый
+
+        &:hover {
+            background: linear-gradient(-90deg, #02edb6 0, #13bce5 18%, #ff62c5 44%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
     }
 }
 .active {

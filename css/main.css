@@ -108,14 +108,35 @@ h6 {
   column-gap: 10px;
 }
 .header__lang {
-  color: #FFFFFF;
+  color: transparent;
+  background: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  transition: background 0.3s ease;
+}
+.header__lang:hover {
+  background: linear-gradient(-90deg, #02edb6 0, #13bce5 18%, #ff62c5 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .header__lang-divider {
   color: #FFFFFF;
   line-height: 42px;
 }
 .header__menu-button {
-  color: #FFFFFF;
+  background: none;
+  border: none;
+  color: #fff;
+  transition: background 0.3s ease;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: #fff;
+}
+.header__menu-button:hover {
+  background: linear-gradient(-90deg, #02edb6 0, #13bce5 18%, #ff62c5 44%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .hero {
